@@ -1,0 +1,7 @@
+CREATE TABLE departments(
+id INTEGER GENERATED ALWAYS AS IDENTITY,
+name VARCHAR(100) NOT NULL,
+description VARCHAR(500),
+CONSTRAINT pk_departments PRIMARY KEY(id),
+CONSTRAINT uq_department_name UNIQUE (name)
+)
