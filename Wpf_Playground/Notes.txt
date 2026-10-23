@@ -1,0 +1,119 @@
+.NET
+│
+├── 1. Languages
+│   ├── C#              ← dominant
+│   ├── F#
+│   └── Visual Basic
+│
+├── 2. Runtime
+│   └── CLR
+│       ├── Garbage Collector
+│       ├── JIT compiler
+│       ├── Type system
+│       ├── Exception handling
+│       └── Threading/runtime services
+│
+├── 3. Base Class Libraries
+│   ├── Collections
+│   ├── Files / IO
+│   ├── Networking
+│   ├── Tasks / async
+│   ├── LINQ
+│   ├── Reflection
+│   └── etc.
+│
+├── 4. Application frameworks
+│   │
+│   ├── Desktop
+│   │   ├── WPF              ← what you're learning
+│   │   └── Windows Forms
+│   │
+│   ├── Web
+│   │   └── ASP.NET Core
+│   │       ├── Web API
+│   │       ├── MVC
+│   │       ├── Razor Pages
+│   │       └── Blazor
+│   │
+│   └── Cross-platform UI
+│       └── .NET MAUI
+│
+├── 5. Data
+│   ├── ADO.NET
+│   └── Entity Framework Core
+│
+├── 6. Build / tooling
+│   ├── .NET SDK
+│   ├── dotnet CLI
+│   ├── MSBuild
+│   └── NuGet
+│
+└── 7. Additional ecosystem
+    ├── Testing frameworks
+    ├── Logging
+    ├── Dependency Injection
+    ├── Cloud libraries
+    └── thousands of NuGet packages
+
+
+
+
+# ==================================== #
+1. Border: is a real WPF element. Its main purpose is to put a border and/or background around one child element.
+And it has the fowllowing properties
+    - BorderBrush	Border color
+    - BorderThickness	Thickness of the border
+    - CornerRadius	Rounded corners
+    - Background	Background inside the border
+    - Padding	Space between border and its child
+    - Margin	Space outside the border
+    - Width / Height	Size
+    - Child 	Element contained inside
+
+2. Button: is one of the most basic WPF controls. It represents something the user can click to perform an action.
+    - Content	What appears inside the button
+    - Width / Height	Size
+    - Margin	Space outside
+    - Padding	Space between content and edges
+    - Background	Background brush
+    - Foreground	Text/foreground brush
+    - FontSize	Text size
+    - HorizontalAlignment	Left/Center/Right/Stretch
+    - VerticalAlignment	Top/Center/Bottom/Stretch
+    - IsEnabled	Whether it can be interacted with
+    - Visibility	Visible/Hidden/Collapsed
+    - Name / x:Name	Name used to reference it
+    - Command	Command to execute, commonly used with MVVM
+3. CheckBox: is a WPF control used when the user can turn an option on or off.
+
+
+
+
+
+4. Frame: is a control used for navigation between different Page objects inside the same window.
+    - x:Name	Gives the Frame a name so you can access it from C#
+    - Source	Specifies the initial Page to navigate to
+    - NavigationUIVisibility	Controls whether the built-in Back/Forward navigation UI appears
+    - JournalOwnership	Controls how the Frame's navigation history is managed
+    - Content	The object currently displayed inside the Frame
+    - Width / Height	Sets its dimensions
+    - MinWidth / MinHeight	Minimum dimensions
+    - MaxWidth / MaxHeight	Maximum dimensions
+    - Margin	Space outside the Frame
+    - Padding	Space between its boundary and content
+    - HorizontalAlignment	Horizontal positioning/stretching
+    - VerticalAlignment	Vertical positioning/stretching
+    - Visibility	Shows, hides, or collapses the Frame
+    - Background	Background brush
+    - BorderBrush	Border color/brush
+    - BorderThickness	Border thickness
+    - IsEnabled	Enables/disables interaction
+    - Opacity	Controls transparency
+
+
+5. StackPanel is a layout container that places its child controls one after another, either vertically or horizontally
+    - Places controls sequentially	Places controls into rows/columns
+    - Very simple layout	More precise layout
+    - Vertical or horizontal	Two-dimensional
+    - Good for groups of controls	Good for the overall page structure
+    - Children naturally follow each other	You specify Grid.Row, Grid.Column, etc.

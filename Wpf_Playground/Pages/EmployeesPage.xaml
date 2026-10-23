@@ -1,0 +1,125 @@
+<Page x:Class="Wpf_Playground.Pages.EmployeesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <!-- Page title Top -->
+        <TextBlock Grid.Row="0"
+                   Text="Employees"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20" />
+
+
+        <!-- Main content Bottom -->
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+
+            <!-- LEFT: Employee list -->
+            <Border Grid.Column="0"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Margin="0,0,10,0">
+
+                <DataGrid x:Name="EmployeesDataGrid"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          SelectionChanged="EmployeesDataGrid_SelectionChanged">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="ID"
+                                            Binding="{Binding Id}" />
+
+                        <DataGridTextColumn Header="First Name"
+                                            Binding="{Binding FirstName}" />
+
+                        <DataGridTextColumn Header="Last Name"
+                                            Binding="{Binding LastName}" />
+
+                        <DataGridTextColumn Header="Department"
+                                            Binding="{Binding Department}" />
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Border>
+
+
+            <!-- RIGHT: Selected employee details -->
+            <Border Grid.Column="1"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Margin="10,0,0,0">
+
+                <StackPanel Margin="15">
+
+                    <TextBlock Text="Selected Employee"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="0,0,0,20" />
+
+
+                    <TextBlock Text="ID"
+                               FontWeight="Bold" />
+
+                    <TextBlock x:Name="SelectedEmployeeId"
+                               Margin="0,0,0,10" />
+
+
+                    <TextBlock Text="First Name"
+                               FontWeight="Bold" />
+
+                    <TextBlock x:Name="SelectedEmployeeFirstName"
+                               Margin="0,0,0,10" />
+
+
+                    <TextBlock Text="Last Name"
+                               FontWeight="Bold" />
+
+                    <TextBlock x:Name="SelectedEmployeeLastName"
+                               Margin="0,0,0,10" />
+
+
+                    <TextBlock Text="Email"
+                               FontWeight="Bold" />
+
+                    <TextBlock x:Name="SelectedEmployeeEmail"
+                               Margin="0,0,0,10" />
+
+
+                    <TextBlock Text="Department"
+                               FontWeight="Bold" />
+
+                    <TextBlock x:Name="SelectedEmployeeDepartment" />
+
+                    <TextBlock Text="Projects"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="0,20,0,10" />
+
+                    <ListBox x:Name="SelectedEmployeeProjects"
+                             DisplayMemberPath="Name"
+                             Height="120" />
+
+                </StackPanel>
+
+            </Border>
+        </Grid>
+
+    </Grid>
+
+</Page>

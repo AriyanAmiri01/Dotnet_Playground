@@ -1,0 +1,138 @@
+[ OBJECTIVES ]
+
+STAGE_01 — BASIC READ-ONLY COMPANY MANAGEMENT
+
+# 1. Frontend — WPF
+    - [X] Main Window
+        - Entry point of the application
+        - Navigation to Employees, Departments and Projects
+
+    - [X] Employees Page
+        - Show all employees
+        - Show basic employee information
+        - Select an employee
+        - Show the projects assigned to the selected employee
+
+    - [X] Departments Page
+        - Show all departments
+        - Select a department
+        - Show employees belonging to the selected department
+
+    - [X] Projects Page
+        - Show all projects
+        - Select a project
+        - Show employees assigned to the selected project
+
+
+# 2. Database — PostgreSQL
+    - [ ] departments table
+    - [ ] employees table
+    - [ ] projects table
+    - [ ] cross_employee_projects table
+
+    - [ ] Define PK, FK, UNIQUE, NOT NULL and CHECK constraints
+    - [ ] Add sample data
+
+    - [ ] Query all employees
+    - [ ] Query all departments
+    - [ ] Query all projects
+    - [ ] Query employees of a department
+    - [ ] Query projects of an employee
+    - [ ] Query employees of a project
+
+
+# 3. Backend — C#
+    - [ ] Define Department model
+    - [ ] Define Employee model
+    - [ ] Define Project model
+
+    - [ ] Create database connection infrastructure
+    - [ ] Execute PostgreSQL queries
+    - [ ] Convert database rows into C# objects
+
+    - [ ] Department service/repository
+    - [ ] Employee service/repository
+    - [ ] Project service/repository
+
+    - [ ] Use async/await for database operations
+    - [ ] Basic database error handling
+
+
+# 4. API — ASP.NET Core
+    - [ ] GET /api/departments
+    - [ ] GET /api/departments/{id}/employees
+
+    - [ ] GET /api/employees
+    - [ ] GET /api/employees/{id}/projects
+
+    - [ ] GET /api/projects
+    - [ ] GET /api/projects/{id}/employees
+
+    - [ ] Return JSON
+    - [ ] Return appropriate HTTP status codes
+
+    - [ ] Connect WPF application to API using HttpClient
+
+
+
+============================================================
+STAGE_01 — TECHNICAL PLAN
+============================================================
+
+# FRONTEND — WPF
+
+1. Application Shell
+    - [ ] Create MainWindow
+    - [ ] Add application title
+    - [ ] Add navigation panel
+    - [ ] Add Employees button
+    - [ ] Add Departments button
+    - [ ] Add Projects button
+    - [ ] Add Frame for page content
+    - [ ] Implement page navigation
+
+
+2. Employees Page
+    - [ ] Create EmployeesPage
+    - [ ] Create employee list
+    - [ ] Show basic employee information
+    - [ ] Implement employee selection
+    - [ ] Show selected employee details
+    - [ ] Show selected employee's projects
+
+
+3. Departments Page
+    - [ ] Create DepartmentsPage
+    - [ ] Create department list
+    - [ ] Implement department selection
+    - [ ] Show selected department details
+    - [ ] Show employees belonging to selected department
+
+
+4. Projects Page
+    - [ ] Create ProjectsPage
+    - [ ] Create project list
+    - [ ] Implement project selection
+    - [ ] Show selected project details
+    - [ ] Show employees assigned to selected project
+
+
+5. Temporary Data
+    - [ ] Add mock employees
+    - [ ] Add mock departments
+    - [ ] Add mock projects
+    - [ ] Add mock employee-project relationships
+    - [ ] Add mock employee-department relationships
+    - [ ] Test all UI interactions
+
+
+6. API Integration
+    - [ ] Create API client/service
+    - [ ] Configure HttpClient
+    - [ ] Replace mock employees with GET /api/employees
+    - [ ] Replace mock departments with GET /api/departments
+    - [ ] Replace mock projects with GET /api/projects
+    - [ ] Load employee projects when employee is selected
+    - [ ] Load department employees when department is selected
+    - [ ] Load project employees when project is selected
+    - [ ] Handle API/network errors

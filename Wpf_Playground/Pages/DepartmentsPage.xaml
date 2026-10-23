@@ -1,0 +1,113 @@
+<Page x:Class="Wpf_Playground.Pages.DepartmentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <!-- Page title -->
+
+        <TextBlock Grid.Row="0"
+                   Text="Departments"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20" />
+
+
+        <!-- Main content -->
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+
+            <!-- LEFT: Department list -->
+
+            <Border Grid.Column="0"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Margin="0,0,10,0">
+
+                <DataGrid x:Name="DepartmentsDataGrid"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          SelectionChanged="DepartmentsDataGrid_SelectionChanged">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="ID"
+                                            Binding="{Binding Id}" />
+
+                        <DataGridTextColumn Header="Name"
+                                            Binding="{Binding Name}" />
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Border>
+
+
+            <!-- RIGHT: Selected department -->
+
+            <Border Grid.Column="1"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    Margin="10,0,0,0">
+
+                <StackPanel Margin="15">
+
+                    <TextBlock Text="Selected Department"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Margin="0,0,0,20" />
+
+
+                    <TextBlock Text="ID"
+                               FontWeight="Bold" />
+
+                    <TextBlock x:Name="SelectedDepartmentId"
+                               Margin="0,0,0,10" />
+
+
+                    <TextBlock Text="Name"
+                               FontWeight="Bold" />
+
+                    <TextBlock x:Name="SelectedDepartmentName"
+                               Margin="0,0,0,10" />
+
+
+                    <TextBlock Text="Description"
+                               FontWeight="Bold" />
+
+                    <TextBlock x:Name="SelectedDepartmentDescription"
+                               Margin="0,0,0,20"
+                               TextWrapping="Wrap" />
+
+
+                    <TextBlock Text="Employees"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="0,0,0,10" />
+
+                    <ListBox x:Name="SelectedDepartmentEmployees"
+                             DisplayMemberPath="FullName"
+                             Height="150" />
+
+                </StackPanel>
+
+            </Border>
+
+        </Grid>
+
+    </Grid>
+
+</Page>
