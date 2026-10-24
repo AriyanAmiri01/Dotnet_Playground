@@ -25,20 +25,24 @@ STAGE_01 — BASIC READ-ONLY COMPANY MANAGEMENT
 
 
 # 2. Database — PostgreSQL
-    - [ ] departments table
-    - [ ] employees table
-    - [ ] projects table
-    - [ ] cross_employee_projects table
+    - [X] departments table
+    - [X] employees table
+    - [X] projects table
+    - [X] cross_employee_projects table
 
-    - [ ] Define PK, FK, UNIQUE, NOT NULL and CHECK constraints
-    - [ ] Add sample data
+    - [X] Define PK, FK, UNIQUE, NOT NULL and CHECK constraints
+    - [X] Add sample data
+        - departments (unless already created)
+        - employees
+        - projects
+        - employee ↔ project relationships
 
-    - [ ] Query all employees
-    - [ ] Query all departments
-    - [ ] Query all projects
-    - [ ] Query employees of a department
-    - [ ] Query projects of an employee
-    - [ ] Query employees of a project
+    - [X] Query all employees
+    - [X] Query all departments
+    - [X] Query all projects
+    - [X] Query employees of a department
+    - [X] Query projects of an employee
+    - [X] Query employees of a project
 
 
 # 3. Backend — C#
@@ -82,9 +86,9 @@ STAGE_01 — TECHNICAL PLAN
 # FRONTEND — WPF
 
 1. Application Shell
-    - [ ] Create MainWindow
-    - [ ] Add application title
-    - [ ] Add navigation panel
+    - [X] Create MainWindow
+    - [X] Add application title
+    - [X] Add navigation panel
     - [ ] Add Employees button
     - [ ] Add Departments button
     - [ ] Add Projects button
